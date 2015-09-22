@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled</title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body ng-controller="myController">
+    <!-- sample angular code -->
+    <div class="container">
+        <div>
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class="row">
+            <div>
+                <i ng-click="turn('rock')" class="fa fa-hand-rock-o"></i>
+                <i ng-click="turn('paper')" class="fa fa-hand-paper-o"></i>
+                <i ng-click="turn('scissors')" class="fa fa-hand-scissors-o"></i>
+                <div class="panel panel-default pull-right">
+                    <h3>Player</h3>
+                    <h3>{{playerScore}}</h3>
+                    <h3>Computer</h3>
+                    <h3>{{computerScore}}</h3>
+                    <button ng-click="playerScore = 0; computerScore = 0;outcome = ''" class="btn btn-default">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div>The computer chose: {{computerChoice}}</div>
+        <div>You chose: {{playerChoice}}</div>
+        <h1>{{outcome}}</h1>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+</body>
+
+</html>
